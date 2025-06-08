@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Funnies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="title">Family Funnies</h1>
+<div id="comic-strip">
+  <div class="panel" data-target="about">
+    <span class="panel-label">About</span>
+    <div class="character">👩‍👧‍👦</div>
+    <div class="speech-bubble">Welcome to the chaos!</div>
+  </div>
+  <div class="panel" data-target="recipes">
+    <span class="panel-label">Recipes</span>
+    <div class="character">🍳</div>
+    <div class="speech-bubble">Dinner is... burnt?</div>
+  </div>
+  <div class="panel" data-target="blog">
+    <span class="panel-label">Blog</span>
+    <div class="character">💻</div>
+    <div class="speech-bubble">Spilling the tea...</div>
+  </div>
+</div>
+
+<div id="pages">
+  <div class="page" id="about">
+    <h2>About Us</h2>
+    <p>This is a silly comic take on our family adventures.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="recipes">
+    <h2>Family Recipes</h2>
+    <p>More burnt toast than gourmet, but we try!</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="blog">
+    <h2>Mom's Blog</h2>
+    <p>Sarcastic tips and real life stories.</p>
+    <button class="back">Back</button>
+  </div>
+</div>
+
+<div id="thought-bubble"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
