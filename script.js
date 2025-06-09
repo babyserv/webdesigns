@@ -1,11 +1,12 @@
-// handle panel clicks
-const panels = document.querySelectorAll('.panel');
+// interactive object clicks
+const objects = document.querySelectorAll('#living-room .object[data-target]');
 const pagesContainer = document.getElementById('pages');
 const pages = document.querySelectorAll('#pages .page');
 
-panels.forEach(panel => {
-  panel.addEventListener('click', () => {
-    const target = panel.getAttribute('data-target');
+objects.forEach(obj => {
+  obj.addEventListener('click', () => {
+    const target = obj.getAttribute('data-target');
+    if (!target) return;
     pagesContainer.style.display = 'flex';
     pages.forEach(page => {
       page.style.display = page.id === target ? 'block' : 'none';
@@ -21,21 +22,25 @@ backButtons.forEach(btn => {
   });
 });
 
-// thought bubbles
+// theme toggle
+const switchEl = document.getElementById('light-switch');
+const livingRoom = document.getElementById('living-room');
+if (switchEl) {
+  switchEl.addEventListener('click', () => {
+    livingRoom.classList.toggle('night');
+  });
+}
+
+// random thought bubbles
 const bubble = document.getElementById('thought-bubble');
 const thoughts = [
-  "They said it gets easier...they lied.",
-  "Is hiding in the pantry a hobby?",
-  "Laundry mountain: still growing."
+  "You forgot your coffee again.",
+  "Day 3 of the laundry protest.",
+  "Where did the remote go?"
 ];
-
 function popThought() {
   bubble.textContent = thoughts[Math.floor(Math.random() * thoughts.length)];
   bubble.style.display = 'block';
-  setTimeout(() => {
-    bubble.style.display = 'none';
-  }, 3000);
+  setTimeout(() => { bubble.style.display = 'none'; }, 3000);
 }
-
 setInterval(popThought, 7000);
-

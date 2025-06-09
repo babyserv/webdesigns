@@ -3,49 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Family Funnies</title>
+<title>The Living Room Portal</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title">Family Funnies</h1>
-<div id="comic-strip">
-  <div class="panel" data-target="about">
-    <span class="panel-label">About</span>
-    <div class="character">👩‍👧‍👦</div>
-    <div class="speech-bubble">Welcome to the chaos!</div>
+<h1 class="title">The Living Room Portal</h1>
+<div id="living-room" class="day">
+  <div id="tv" class="object" data-target="video">📺</div>
+  <div id="couch" class="object">
+    🛋️
+    <div id="cushions" class="submenu">
+      <button data-target="blog">Blog Posts</button>
+      <button data-target="parenting">Parenting Stories</button>
+      <button data-target="hacks">Life Hacks</button>
+    </div>
   </div>
-  <div class="panel" data-target="recipes">
-    <span class="panel-label">Recipes</span>
-    <div class="character">🍳</div>
-    <div class="speech-bubble">Dinner is... burnt?</div>
-  </div>
-  <div class="panel" data-target="blog">
-    <span class="panel-label">Blog</span>
-    <div class="character">💻</div>
-    <div class="speech-bubble">Spilling the tea...</div>
-  </div>
+  <div id="bookshelf" class="object" data-target="resources">📚</div>
+  <div id="toy-chest" class="object" data-target="kids">🧸</div>
+  <div id="coffee-table" class="object" data-target="recent">☕</div>
+  <div id="wall-art" class="object" data-target="gallery">🖼️</div>
+  <div id="laundry-basket" class="object" data-target="chaos">🧺</div>
+  <div id="pet" class="object" data-target="momtime">🐾</div>
+  <div id="light-switch" class="object">🔌</div>
+  <div id="toy-phone" class="object" data-target="contact">📞</div>
 </div>
 
 <div id="pages">
-  <div class="page" id="about">
-    <h2>About Us</h2>
-    <p>This is a silly comic take on our family adventures.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="recipes">
-    <h2>Family Recipes</h2>
-    <p>More burnt toast than gourmet, but we try!</p>
+  <div class="page" id="video">
+    <h2>Mom Confessionals</h2>
+    <p>Featured video content coming soon.</p>
     <button class="back">Back</button>
   </div>
   <div class="page" id="blog">
-    <h2>Mom's Blog</h2>
-    <p>Sarcastic tips and real life stories.</p>
+    <h2>Blog Posts</h2>
+    <p>Latest family updates and stories.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="parenting">
+    <h2>Parenting Stories</h2>
+    <p>Real talk about raising kids.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="hacks">
+    <h2>Life Hacks</h2>
+    <p>Tricks to survive the daily chaos.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="resources">
+    <h2>Resource Hub</h2>
+    <p>Printables and guides for busy moms.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="kids">
+    <h2>Kids' Corner</h2>
+    <p>Activities and games for the little ones.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="recent">
+    <h2>What's Hot</h2>
+    <p>Recent blog entries and trending topics.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="gallery">
+    <h2>Mom Art Gallery</h2>
+    <p>Quotes and reader submissions.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="chaos">
+    <h2>Chaos Corner</h2>
+    <p>Fails, rants and "what just happened?" moments.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="momtime">
+    <h2>Mom Time</h2>
+    <p>Memes and self-care ideas.</p>
+    <button class="back">Back</button>
+  </div>
+  <div class="page" id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out via our toy phone hotline!</p>
     <button class="back">Back</button>
   </div>
 </div>
 
-<div id="thought-bubble"></div>
-
 <script src="script.js"></script>
+<div id="thought-bubble"></div>
 </body>
 </html>
