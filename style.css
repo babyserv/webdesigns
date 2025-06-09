@@ -14,57 +14,50 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#comic-strip {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+#living-room {
+  position: relative;
+  height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
   background: #fff8dc;
-  padding: 1rem;
+  border: 2px solid #333;
+  overflow: hidden;
 }
 
-.panel {
-  position: relative;
-  flex: 0 0 80vw;
-  height: 300px;
-  margin-right: 2rem;
-  border: 2px solid #333;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#living-room.night {
+  background: #2c2c2c;
+  color: #f0f0f0;
+}
+
+.object {
+  position: absolute;
   font-size: 2rem;
   cursor: pointer;
-  scroll-snap-align: start;
+  user-select: none;
 }
 
-.panel-label {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  background: #333;
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-  font-size: 1rem;
-}
+#tv { top: 10%; left: 5%; }
+#couch { bottom: 5%; left: 40%; }
+#bookshelf { top: 10%; right: 5%; }
+#toy-chest { bottom: 10%; right: 10%; }
+#coffee-table { bottom: 25%; left: 50%; transform: translateX(-50%); }
+#wall-art { top: 5%; left: 40%; }
+#laundry-basket { bottom: 5%; left: 5%; }
+#pet { bottom: 15%; right: 40%; }
+#light-switch { top: 5%; right: 2%; }
+#toy-phone { bottom: 5%; right: 25%; }
 
-.character {
-  font-size: 3rem;
-}
-
-.speech-bubble {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  padding: 0.5rem;
-  background: #fff;
-  border: 2px solid #333;
-  border-radius: 10px;
+.submenu {
   display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 0.5rem;
 }
 
-.panel:hover .speech-bubble {
-  display: block;
-}
+#couch:hover .submenu { display: block; }
 
 #pages {
   position: fixed;
@@ -81,29 +74,6 @@ body {
   overflow-y: auto;
 }
 
-.page {
-  max-width: 600px;
-  text-align: center;
-}
+.page { max-width: 600px; text-align: center; }
 
-#thought-bubble {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  background: #fff;
-  border: 2px solid #333;
-  border-radius: 10px;
-  padding: 0.5rem 1rem;
-  display: none;
-  animation: pop 0.5s ease-out;
-}
-
-@keyframes pop {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-button.back {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-}
+button.back { margin-top: 1rem; padding: 0.5rem 1rem; }
