@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Room Portal</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1 class="title">The Living Room Portal</h1>
-<div id="living-room" class="day">
-  <div id="tv" class="object" data-target="video">📺</div>
-  <div id="couch" class="object">
-    🛋️
-    <div id="cushions" class="submenu">
-      <button data-target="blog">Blog Posts</button>
-      <button data-target="parenting">Parenting Stories</button>
-      <button data-target="hacks">Life Hacks</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Serviss Station | Web Design Company</title>
+    <meta
+      name="description"
+      content="The Serviss Station is a web design company building immersive, future-forward digital experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="space-scene" aria-hidden="true">
+      <div class="stars" id="stars"></div>
+      <div class="nebula"></div>
+      <div class="planet planet-a"></div>
+      <div class="planet planet-b"></div>
+      <div class="rocket" id="rocket">
+        <div class="rocket-window"></div>
+        <div class="rocket-fin rocket-fin-left"></div>
+        <div class="rocket-fin rocket-fin-right"></div>
+        <div class="rocket-flame"></div>
+      </div>
     </div>
-  </div>
-  <div id="bookshelf" class="object" data-target="resources">📚</div>
-  <div id="toy-chest" class="object" data-target="kids">🧸</div>
-  <div id="coffee-table" class="object" data-target="recent">☕</div>
-  <div id="wall-art" class="object" data-target="gallery">🖼️</div>
-  <div id="laundry-basket" class="object" data-target="chaos">🧺</div>
-  <div id="pet" class="object" data-target="momtime">🐾</div>
-  <div id="light-switch" class="object">🔌</div>
-  <div id="toy-phone" class="object" data-target="contact">📞</div>
-</div>
 
-<div id="pages">
-  <div class="page" id="video">
-    <h2>Mom Confessionals</h2>
-    <p>Featured video content coming soon.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="blog">
-    <h2>Blog Posts</h2>
-    <p>Latest family updates and stories.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="parenting">
-    <h2>Parenting Stories</h2>
-    <p>Real talk about raising kids.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="hacks">
-    <h2>Life Hacks</h2>
-    <p>Tricks to survive the daily chaos.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="resources">
-    <h2>Resource Hub</h2>
-    <p>Printables and guides for busy moms.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="kids">
-    <h2>Kids' Corner</h2>
-    <p>Activities and games for the little ones.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="recent">
-    <h2>What's Hot</h2>
-    <p>Recent blog entries and trending topics.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="gallery">
-    <h2>Mom Art Gallery</h2>
-    <p>Quotes and reader submissions.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="chaos">
-    <h2>Chaos Corner</h2>
-    <p>Fails, rants and "what just happened?" moments.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="momtime">
-    <h2>Mom Time</h2>
-    <p>Memes and self-care ideas.</p>
-    <button class="back">Back</button>
-  </div>
-  <div class="page" id="contact">
-    <h2>Contact Us</h2>
-    <p>Reach out via our toy phone hotline!</p>
-    <button class="back">Back</button>
-  </div>
-</div>
+    <main class="site-shell">
+      <header class="hero">
+        <p class="kicker">Futuristic 50s Inspired Studio</p>
+        <h1>The Serviss Station</h1>
+        <p class="subtitle">
+          We launch bold, immersive websites with Jetsons-era imagination and
+          modern performance.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">Explore Services</a>
+          <a class="btn btn-secondary" href="#contact">Start a Project</a>
+        </div>
+      </header>
 
-<script src="script.js"></script>
-<div id="thought-bubble"></div>
-</body>
+      <section class="panel" id="services">
+        <h2>Design Services</h2>
+        <div class="grid">
+          <article>
+            <h3>Galactic Brand Websites</h3>
+            <p>
+              Custom identity-driven websites crafted to feel immersive, unique,
+              and unmistakably yours.
+            </p>
+          </article>
+          <article>
+            <h3>Mobile First Buildouts</h3>
+            <p>
+              Responsive layouts and touch-friendly interactions for seamless
+              browsing on every device.
+            </p>
+          </article>
+          <article>
+            <h3>Animated Storytelling</h3>
+            <p>
+              Motion effects, interactive visuals, and smooth UI flows that keep
+              visitors engaged.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="contact">
+        <h2>Ready for Lift-Off?</h2>
+        <p>
+          Tell us your mission and The Serviss Station will design your next
+          cosmic digital experience.
+        </p>
+        <a class="btn btn-primary" href="mailto:hello@servissstation.com"
+          >hello@servissstation.com</a
+        >
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
