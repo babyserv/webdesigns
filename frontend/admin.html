@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Architect AI Studio</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="portal-page">
+  <header class="site-header">
+    <a href="/" class="logo">Architect<span>AI</span></a>
+    <nav><a href="/frontend/portal.html">Client Portal</a></nav>
+  </header>
+  <main class="section">
+    <h1>Admin Panel</h1>
+    <p>View all clients, projects, update statuses, and push delivery updates.</p>
+    <section class="card">
+      <button id="loadProjects" class="btn btn-sm">Load All Projects</button>
+      <div id="allProjects"></div>
+    </section>
+  </main>
+  <script src="/scripts/admin.js" defer></script>
+</body>
+</html>

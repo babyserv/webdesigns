@@ -1,0 +1,20 @@
+{
+  "name": "webdesigns-ai-agency-system",
+  "version": "1.0.0",
+  "description": "AI-powered premium website generation and client portal platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.7.1",
+    "square": "^41.0.0"
+  }
+}

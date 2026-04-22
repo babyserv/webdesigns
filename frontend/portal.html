@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal | Architect AI Studio</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="portal-page">
+  <header class="site-header">
+    <a href="/" class="logo">Architect<span>AI</span></a>
+    <nav>
+      <a href="/">Generator</a>
+      <a href="/frontend/admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Client Portal</h1>
+    <div class="cards two">
+      <section class="card">
+        <h2>Register</h2>
+        <form id="registerForm" class="stack">
+          <input name="name" placeholder="Full name" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button class="btn">Create Account</button>
+        </form>
+      </section>
+      <section class="card">
+        <h2>Login</h2>
+        <form id="loginForm" class="stack">
+          <input name="email" type="email" placeholder="Email" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button class="btn">Login</button>
+        </form>
+      </section>
+    </div>
+
+    <section id="dashboard" class="card hidden">
+      <h2>Your Project Dashboard</h2>
+      <p id="profile"></p>
+      <div id="projectList"></div>
+
+      <h3>Add Note</h3>
+      <form id="noteForm" class="stack-inline">
+        <input name="projectId" placeholder="Project ID" required />
+        <input name="note" placeholder="Write a note" required />
+        <button class="btn btn-sm">Save</button>
+      </form>
+
+      <h3>Upload Asset</h3>
+      <form id="uploadForm" enctype="multipart/form-data" class="stack-inline">
+        <input name="projectId" placeholder="Project ID" required />
+        <input type="file" name="asset" required />
+        <button class="btn btn-sm">Upload</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/scripts/portal.js" defer></script>
+</body>
+</html>
