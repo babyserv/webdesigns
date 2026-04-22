@@ -1,0 +1,97 @@
+:root {
+  --bg: #0a0c18;
+  --surface: #11162a;
+  --ink: #f4f7ff;
+  --muted: #9facd9;
+  --accent: #76e3ff;
+  --accent-2: #ae7bff;
+  --success: #70f0b7;
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% -20%, #17274e, var(--bg) 45%);
+  line-height: 1.5;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(8, 10, 22, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+}
+.logo { color: var(--ink); font-weight: 800; text-decoration: none; font-size: 1.2rem; }
+.logo span { color: var(--accent); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 1rem; }
+nav a:hover { color: var(--ink); }
+main { overflow: clip; }
+.hero { min-height: 82vh; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; padding: 6rem 5vw; }
+.kicker { color: var(--success); letter-spacing: 0.08em; text-transform: uppercase; }
+h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.1; margin: 0.4rem 0; }
+em { color: var(--accent); font-style: normal; }
+.subcopy { max-width: 60ch; color: var(--muted); }
+.hero-card, .card {
+  background: linear-gradient(170deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+.floating { animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.section { padding: 4rem 5vw; }
+.dark { background: rgba(4,6,15,0.6); }
+.cards { display: grid; gap: 1rem; }
+.cards.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.cards.two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #08101f;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(118,227,255,.35); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid rgba(255,255,255,.2); }
+.btn-sm { padding: .45rem .9rem; font-size: .9rem; }
+.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin: 1rem 0; }
+.trust-row { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--muted); padding: 0; list-style: none; }
+.intake-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.intake-grid label { display: flex; flex-direction: column; font-weight: 600; color: #dbe7ff; gap: .35rem; }
+input, textarea, select {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(8,14,30,.7);
+  color: #fff;
+}
+textarea { min-height: 100px; }
+.result-panel { margin-top: 1rem; padding: 1rem; border-left: 3px solid var(--accent); background: rgba(118,227,255,.08); border-radius: 12px; }
+.quote cite { display:block; margin-top: .8rem; color: var(--muted); font-style: normal; }
+.cta { text-align: center; }
+footer { text-align: center; padding: 2rem 1rem; color: var(--muted); }
+.portal-page .section { max-width: 1100px; margin: 0 auto; }
+.stack, .stack-inline { display: grid; gap: .7rem; }
+.stack-inline { grid-template-columns: repeat(3,minmax(0,1fr)); align-items: center; }
+.hidden { display: none; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+@media (max-width: 900px) {
+  .hero, .cards.three, .cards.two, .intake-grid, .stack-inline { grid-template-columns: 1fr; }
+  nav a:not(.btn) { display: none; }
+}
